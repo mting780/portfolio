@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Melody Ting</title>
+  <meta name="description" content="Melody Ting">
+  <meta name="author" content="SitePoint">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css'>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body style="overflow-y: auto;scroll-behavior: smooth">
+ <section>
+    	<div class="page-container">
+    		<h1 id="page_title2">collegebacker</h1>   	
+    		<svg id="page_underline2" height="0" width="500">
+  				<line  x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(0,0,0);stroke-width:2;" />
+			</svg>
+      <div class="side_nav" id="side_nav">
+        <div class="side_nav_item" id="home">home</div>
+        <div class="side_nav_item" id="visceral">EA visceral</div>
+        <div class="side_nav_item" id="maxis">EA maxis</div>
+        <div class="side_nav_item" id="collegebacker">collegebacker</div>
+        <div class="side_nav_item" id="tesla">tesla</div>
+      </div>
+      <br><br>
+      <h2 class="subtitle">the challenge</h2>
+      <p class="content">While I worked on multiple features, one of biggest challenges I tackled was the entire onboarding process for parents looking to set up a CollegeBacker account for their child attending Intrepid Academy. Intrepid Academy is a CollegeBacker partner that provides grants to their students who set up accounts, rewarding families over years of attendance. My task was to design the entire flow a parent would take from their first time setting up the account to submitting their 529 application. This challenge took about 3 weeks from start to user testing.</p>
+      <h2 class="subtitle">the users</h2>
+      <p class="content">Since I was designing this experience specifically for Intrepid Academy parents, I needed to be aware of some key limitations presented by this population. Namely, that:<br>
+      1. not all parents are documented citizens; an issue that would later affect their financial control over a 529 account<br>
+      2. not all parents had an email address<br>
+      3. most parents were unfamiliar with the process of saving for college<br>
+      Furthermore, previous user studies conducted on the temporary, placeholder parent onboarding process revealed that the language used to describe a 529 plan as well as the investment practices suggested by CollegeBacker were confusing to users.</p>
+      <h2 class="subtitle">research</h2>
+      <p class="content">Before I could even draft anything, I needed to understand what service this process was providing and why. To achieve that, I needed to know what a 529 plan was and how it helped families save for college. To better understand the intricacies of setting up a 529 plan and its benefits, as well as to find more palatable ways of presenting  highly technical information, I researched different definitions provided by government sites, parenting blogs, and similar services and reviewed notes from UX testing sessions conducted on previous site features. From there, I was able to create user personas that helped me better understand our key users.<br>
+      <br>
+      I also did a preliminary review of whatever was available for the current design and noted feedback from previous user testing sessions.​​​​​​</p>
+      <img class="visuals" src="work_documentation/collegebacker/CB_notes.jpg">
+      <h2 class="subtitle">objectives</h2>
+      <p class="content">After observing concerns associated with previous user testing sessions on a separate onboarding process, I identified three key objectives I would be fulfilling in my design:<br>
+      1. Educate parents on the purpose and function of the 529 plan and CollegeBacker's services. How do we explain the fundamental features of the 529 plan in a succinct way that doesn't confuse users, yet provides enough information to make them want to sign up?<br>
+      2. Inform users on various grants and benefits associated with their school and the two different account types. Partner institutions offer various financial benefits for parents who sign up with CollegeBacker, but sometimes the details of these awards gets lost in the onboarding process. We want to make signing up for CollegeBacker a rewarding experience.<br>
+      3. Encourage users to contribute to their child's CollegeBacker account and grow their savings. Ultimately, the onboarding process is only the initial step in creating the user-service relationship between parents and CollegeBacker. How do we extend the relationship between the user and CollegeBacker so they continue to return to our service and contribute?
+      Furthermore, while this example focuses explicitly on an Intrepid Academy-CollegeBacker partnership experience, the onboarding process was designed to scale for any institution that may form a relationship with CollegeBacker.</p>
+      <h2 class="subtitle">interaction model</h2>
+      <img class="visuals" src="work_documentation/collegebacker/flow.png">
+      <p class="content">The next step was to visualize the user flow for signing up. I used pen and paper to map out a rough concept of the process, working with the finders to tweak individual steps based off available information.
+      I then created a formal user flow that outlines the process from start to finish, outlining the overarching purpose of each step and ensuring that ever action yielded a destination or result.
+      I also looked at different edge cases to better understand where users might feel pigeonholed. For example, what happens when a user forgets their child's student ID? Without an email to recover that information, we needed to create a destination page that would inform them of what steps to take.​</p>
+      <img class="visuals" src="work_documentation/collegebacker/iteration.png">
+      <h2 class="subtitle">iteration</h2>
+      <p class="content">One step of the flow underwent multiple changes was the confirmation page right before the user of an institution-owned - as opposed to a parent-owned - account made the first contribution to their child's savings account. By default, Intrepid Academy parents are automatically set up with an institution-owned account, which does not require the parent's personal identifiable information necessary for a parent-owned account.Instead of presenting the user with their current limitations straight away, we chose to display the benefits of switching accounts before informing the user of the drawbacks of the current one. By starting with a positive screen, we offer the user an opportunity for greater control over their contributions, rather than intimidating them from contributing right away.<br>
+        <br><br>
+</div>
+
+</section>
+<script>
+  //from nnnnnn on stackoverflow
+  function GetElementInsideContainer(containerID, childID) {
+    var elm = document.getElementById(childID);
+    var parent = elm ? elm.parentNode : {};
+    return (parent.id && parent.id === containerID) ? elm : {};
+  };
+  var home = GetElementInsideContainer("side_nav","home");
+  var visceral = GetElementInsideContainer("side_nav","visceral");
+  var maxis = GetElementInsideContainer("side_nav","maxis");
+  var tesla = GetElementInsideContainer("side_nav","tesla");
+
+    home.onclick = function () {
+      location.href = "index.html";
+    };
+    visceral.onclick = function () {
+        location.href = "visceral-protected.html";
+    };
+    maxis.onclick = function () {
+        location.href = "maxis.html";
+    };
+    tesla.onclick = function () {
+      location.href = "tesla.html";
+    };
+</script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js'></script>
+<script  src="./timeline.js"></script>
+<script type="text/javascript" src="onepage/jquery.onepage-scroll.js"></script>
+
+</div>
+</body>
+</html>

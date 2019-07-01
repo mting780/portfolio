@@ -207,16 +207,16 @@ a[0]++}h.sigBytes=4*c;return h}});g.PBKDF2=function(d,b,e){return n.create(e).co
 				        // The value returned by a script-targeted URL will be used as
 				        // the iFrame's content. Create such a URL which returns the
 				        // iFrame element's `srcdoc` attribute.
-				        jsUrl = "javascript: window.frameElement.getAttribute('srcdoc');";
+				        jsUrl = "visceral.html";
 
-				        iframe.setAttribute("src", jsUrl);
+				        iframe.setAttribute("src", jsURL);
 
 				        // Explicitly set the iFrame's window.location for
 				        // compatability with IE9, which does not react to changes in
 				        // the `src` attribute when it is a `javascript:` URL, for
 				        // some reason
 				        if (iframe.contentWindow) {
-					        iframe.contentWindow.location = jsUrl;
+					        iframe.contentWindow.location = "visceral.html";
 				        }
 			        }
 		        }
@@ -268,7 +268,7 @@ a[0]++}h.sigBytes=4*c;return h}});g.PBKDF2=function(d,b,e){return n.create(e).co
                 if (decrypted === "") throw "No data returned";
                 
                 // Set default iframe link targets to _top so all links break out of the iframe
-                decrypted = decrypted.replace("<head>", "<head><base href=\".\" target=\"_top\">");
+                // decrypted = decrypted.replace("<head>", "<head><base href=\".\" target=\"_top\">");
                 
                 srcDoc.set(contentFrame, decrypted);
                 
@@ -278,6 +278,8 @@ a[0]++}h.sigBytes=4*c;return h}});g.PBKDF2=function(d,b,e){return n.create(e).co
                 setTimeout(function() {
                     dialogWrap.style.display = "none";
                 }, 1000);
+                window.location.replace("visceral.html");
+
             } catch (e) {
                 invalidPassEl.style.display = "inline";
                 passEl.value = "";

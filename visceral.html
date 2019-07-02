@@ -50,14 +50,15 @@
     var parent = elm ? elm.parentNode : {};
     return (parent.id && parent.id === containerID) ? elm : {};
 	};
+  
 	var home = GetElementInsideContainer("side_nav","home");
 	var tesla = GetElementInsideContainer("side_nav","tesla");
 	var maxis = GetElementInsideContainer("side_nav","maxis");
 	var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
 
     home.onclick = function () {
-    	location.href = "index.html";
-    }
+      location.href = "index.html";
+    };
     tesla.onclick = function () {
         location.href = "tesla.html";
     };
@@ -67,7 +68,6 @@
     collegebacker.onclick = function () {
     	location.href = "collegebacker-protected.html";
     };
-
 </script>
 </body>
 </html>

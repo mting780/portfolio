@@ -198,10 +198,10 @@ h1.name {
   height: 720px;
   margin: 20px auto;
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .timeline-wrapper {
-    height: 1000px;
-    max-height: 900px;
+    height: 720px;
+    max-height: 720px;
   }
 }
 .timeline-slider {
@@ -225,17 +225,32 @@ h1.name {
   overflow: hidden;
   background-repeat: no-repeat;
   outline: none;
-  background-size: auto 100%, auto;
-  background-position: left;
+  background-size: 60%, auto;
+  background-position: 10% 50%;
   margin: 0 20px;
   max-width: 90%;
   max-height: 600px;
   z-index: 1;
   box-shadow: 2px 3px 15px 2px #ababab;
 }
+
+@media (max-width: 900px) {
+  .timeline-slide {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  outline: none;
+  background-size: 80% auto;
+  background-position: 50% 15%;
+  width: 80%;
+  z-index: -30;
+  max-height: 100%
+  }
+}
+
 .timeline-slide:after {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -243,60 +258,64 @@ h1.name {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
+
+@media (min-width: 901px){
 .timeline-slide__content {
-  z-index: 5;
+  z-index: 100;
   position: absolute;
   background: #ffffff;
   width: 30%;
-  height: 100%;
+  max-height: 100%;
   left: 84%;
   padding: 20px 20px;
   -webkit-transform: translate(-50%, 0px);
           transform: translate(-55%, 0px);
-/*  padding: 0px 20px 0px 20px;
-*/  opacity: 0;
+  padding: 20px 20px 20px 20px;
+  opacity: 0;
   transition: opacity 1s;
 }
+}
+@media (max-width: 900px) {
+.timeline-slide__content {
+  z-index: 100;
+  position: absolute;
+  top: 320px;
+  background: #ffffff;
+  width: 100%;
+  left: 50%;
+  height: 80%;
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+  margin: 20px 20px 20px 20px;
+  opacity: 1;
+  transition: opacity 1s;
+ }
+}
+
+
 
 h5.timeline-slide__content{
   font-size: 18px;
   font-style: "semi-bold";
-  position: relative;
-
-}
-
-@media (max-width: 900px) {
-  .timeline-slide__content {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 20px auto;
-  }
-}
-.timeline-year {
-  z-index: 5;
-  font-size: 35px;
-  color: #ffffff;
-  background: #ff9900;
-  padding: 15px 26px;
-  transition: opacity 1.2s;
   position: absolute;
-  right: 0;
-  opacity: 0;
+
 }
+
 .timeline-title {
   color: #4c4c4c;
-  font-size: 1.5vw;
-  line-height: 2vw;
+  font-size: 18px;
+  line-height: 20px;
   font-weight: 400;
   font-style: "bold";
+  margin: 20px 20px 20px 20px;
 }
 .timeline-text {
-  font-size: 1vw;
-  width: auto;
+  font-size: 12pt;
+  width: 90%;
   text-align: left;
-  position: inherit;
-  line-height: 1.5vw;
-  padding-right: 20px;
+  position: absolute;
+  line-height: 16pt;
+  padding: 20px 20px 20px 20px;
   color: #666666;
 }
 
@@ -352,8 +371,18 @@ h5.timeline-slide__content{
   font-size: 18px;
 }
 
+#below {
+  color: #fff;
+  position: absolute;
+  font-size: 1vw;
+  left: 45%;
+  top: 90%;
+  z-index: 50;
+  text-align: center;
+}
+
 .button {
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;  Safari 
   transition-duration: 0.4s;
   background-color: #12415a; 
   color: black; 
@@ -367,7 +396,7 @@ h5.timeline-slide__content{
   display: flex;
   font-size: 16px;
   margin: 20px 0px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s; /*Safari */
   transition-duration: 0.4s;
   cursor: pointer;
   position: absolute;
@@ -376,6 +405,22 @@ h5.timeline-slide__content{
 .button:hover {
   background-color: #c4c4c4; /* gray */
   color: white;
+}
+
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  z-index: 50;
+  position: absolute;
+  left: 50%;
+  top: 95%;
 }
 
 .subtitle{
@@ -411,6 +456,7 @@ h5.timeline-slide__content{
   margin-bottom: 30px;
 }
 
+
 /* width */
 ::-webkit-scrollbar {
   width: 12px;
@@ -434,14 +480,36 @@ h5.timeline-slide__content{
 }
 
 
-.icon{
-  max-width: 3%;
+/*.icon{
+  max-width: 6vw;
   height: auto;
   margin: 30px auto;
   position: absolute;
   top: 40%;
+  display: inline-block;
   align-content: center;
   text-align: center;
+}
+
+*/
+.icon {
+    max-height:3vw;
+    max-width: auto;
+    position: relative;
+    display:inline;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    border-width: 1px;
+}
+.icon:nth-child(3n+1) {
+    clear:both;
+}
+
+
+@media (max-width: 900px) {
+  .icon{
+    max-height: 10vw;
+  }
 }
 .icon:hover {
   opacity: .3;
@@ -452,8 +520,10 @@ h5.timeline-slide__content{
 #email{
   top: 50%; 
   position: absolute;
-  text-align: left;
-  left: 30%;
+  text-align: center;
+  left: 50%;
+  line-height: 160%;
+  transform: translate(-50%, -50%);
 
 }
 

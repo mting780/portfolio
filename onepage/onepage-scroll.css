@@ -214,7 +214,7 @@ h1.name {
 @media (max-width: 700px) {
   .timeline-wrapper {
     height: 720px;
-    max-height: 720px;
+    max-height: 920px;
   }
 }
 .timeline-slider {
@@ -250,14 +250,15 @@ h1.name {
 @media (max-width: 900px) {
   .timeline-slide {
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
   background-repeat: no-repeat;
   outline: none;
   background-size: 80% auto;
   background-position: 50% 15%;
   width: 80%;
   z-index: -30;
-  min-height: 90%;
+  min-height: 80%;
+
   }
 }
 
@@ -278,7 +279,7 @@ h1.name {
   position: absolute;
   background: #ffffff;
   width: 30%;
-  max-height: 100%;
+  max-height: 80%;
   left: 84%;
   padding: 20px 20px;
   -webkit-transform: translate(-50%, 0px);
@@ -302,6 +303,7 @@ h1.name {
   margin: 20px 20px 20px 20px;
   opacity: 1;
   transition: opacity 1s;
+  overflow-y: auto;
  }
 }
 
@@ -364,6 +366,16 @@ h5.timeline-slide__content{
   top: 13%;
   border: 2px solid #000000;
 }
+
+@media (max-height: 900px) {
+  #page_title{
+    opacity: 0;
+  }
+  #page_underline{
+    opacity: 0;
+  }
+}
+
 
 #page_underline2{
   position: absolute;

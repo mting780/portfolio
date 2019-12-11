@@ -19,9 +19,9 @@
   var defaults = {
     sectionContainer: "section",
     easing: "ease",
-    animationTime: 1000,
+    animationTime: 700,
     pagination: true,
-    updateURL: false,
+    updateURL: true,
     keyboard: true,
     beforeMove: null,
     afterMove: null,

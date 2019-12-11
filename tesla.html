@@ -10,21 +10,22 @@
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-
-<body style="overflow-y: auto;scroll-behavior: smooth">
-<div class="page-container">
-	<h1 id="page_title2">tesla</h1>   	
-	<svg id="page_underline2" height="0" width="500" style="top: 12%;">
+  <br><br>
+<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<div class="page-co	ntainer">
+	<h1 id="page_title2">melody ting</h1>   	
+	<svg id="page_underline2" height="0" width="500">
 			<line style="stroke:rgb(0,0,0);stroke-width:2" />
 	</svg>
 	<div class="side_nav" id="side_nav">
-        <div class="side_nav_item" id="home">home</div>
+        <div class="side_nav_item" id="home">virtual facility</div>
         <div class="side_nav_item" id="visceral">EA visceral</div>
         <div class="side_nav_item" id="maxis">EA maxis</div>
         <div class="side_nav_item" id="collegebacker">collegebacker</div>
         <div class="side_nav_item" id="tesla">tesla</div>
-     </div>
-    <br><br>
+        <br><br>
+        <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
+  	</div>
 	<h2 class="subtitle">what I did </h2>
 	<p class="content">While I'm restricted by NDA from publishing any of the work I completed during my internship, I can provide a high-level overview of some of the projects I contributed to in the context of the supply chain:</p>
 	<div style="left: 30%; width: 40%; position: relative; display: inline;justify-content: center; align-content: center">
@@ -64,6 +65,38 @@
 	</p>
 	<br><br>
 </div>
+<script>
+  function styleMenuSelection() {
+    var home = GetElementInsideContainer("side_nav","home");
+    var visceral = GetElementInsideContainer("side_nav","visceral");
+    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+    var tesla = GetElementInsideContainer("side_nav","tesla");
+    var maxis = GetElementInsideContainer("side_nav","maxis");
+
+    var projectPath = window.location.pathname.replace('/', '')
+
+    switch(projectPath) {
+      case 'visceral.html':
+        visceral.style.fontWeight = 'bold'
+        break
+      case 'index.html': 
+        home.style.fontWeight = 'bold'
+        break
+      case 'collegebacker-protected.html':
+        collegebacker.style.fontWeight = 'bold'
+        break
+      case 'tesla.html':
+        tesla.style.fontWeight = 'bold'
+        break
+      case 'maxis.html':
+        maxis.style.fontWeight = 'bold'
+        break
+      default:
+        break
+    }
+
+  }
+</script>
 <script type="text/javascript">
 	//from nnnnnn on stackoverflow
 	function GetElementInsideContainer(containerID, childID) {
@@ -79,7 +112,7 @@
     	location.href = "index.html";
     }
     visceral.onclick = function () {
-        location.href = "visceral-protected.html";
+        location.href = "visceral.html";
     };
     maxis.onclick = function () {
         location.href = "maxis.html";
@@ -87,6 +120,9 @@
     collegebacker.onclick = function () {
     	location.href = "collegebacker-protected.html";
     };
+    resume.onclick = function() {
+      location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
+    }
 </script>
 </body>
 </html>

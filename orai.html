@@ -11,7 +11,7 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 <br><br>
-<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<body style="overflow-y: auto;scroll-behavior: smooth">
 <div class="page-container">
 	<h1 id="page_title2">melody ting</h1>   	
 	<svg id="page_underline2" height="0" width="500">
@@ -33,42 +33,11 @@
   <p class="content">As one of two designers on the team, my responsibilities span the entire spectrum of design - from brainstorming and prototyping core features to conducting user interviews and distilling feedback. My coworker and fellow designer <a href="https://rolanddubois.com/">Roland Dubois</a> have been tasked with establishing the design system and foundation for the web platform and are in the process of documenting our entire process. For more information on specific projects I have been working on, please reach out to me directly via email or <a href="linkedin.com/in/melody-ting">Linkedin</a>. </p>
 
 </div>
-<script>
-  function styleMenuSelection() {
-    var home = GetElementInsideContainer("side_nav","home");
-    var visceral = GetElementInsideContainer("side_nav","visceral");
-    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-    var tesla = GetElementInsideContainer("side_nav","tesla");
-    var maxis = GetElementInsideContainer("side_nav","maxis");
-
-    var projectPath = window.location.pathname.replace('/', '')
-
-    switch(projectPath) {
-      case 'visceral.html':
-        visceral.style.fontWeight = 'bold'
-        break
-      case 'index.html': 
-        home.style.fontWeight = 'bold'
-        break
-      case 'collegebacker-protected.html':
-        collegebacker.style.fontWeight = 'bold'
-        break
-      case 'tesla.html':
-        tesla.style.fontWeight = 'bold'
-        break
-      case 'maxis.html':
-        maxis.style.fontWeight = 'bold'
-        break
-      default:
-        break
-    }
-
-  }
-</script>
 <script type="text/javascript">
     //from nnnnnn on stackoverflow
 	function GetElementInsideContainer(containerID, childID) {
     var elm = document.getElementById(childID);
+
     var parent = elm ? elm.parentNode : {};
     return (parent.id && parent.id === containerID) ? elm : {};
 

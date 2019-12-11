@@ -8,26 +8,27 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css'>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 
-<body style="overflow-y: auto;scroll-behavior: smooth">
+<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
  <section>
     	<div class="page-container">
-    		<h1 id="page_title2">collegebacker</h1>   	
-    		<svg id="page_underline2" height="0" width="500">
-  				<line  x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(0,0,0);stroke-width:2;" />
-			</svg>
-      <div class="side_nav" id="side_nav">
-        <div class="side_nav_item" id="home">home</div>
-        <div class="side_nav_item" id="visceral">EA visceral</div>
-        <div class="side_nav_item" id="maxis">EA maxis</div>
-        <div class="side_nav_item" id="collegebacker">collegebacker</div>
-        <div class="side_nav_item" id="tesla">tesla</div>
-      </div>
-      <br><br>
+    		<h1 id="page_title2">melody ting</h1>     
+  <svg id="page_underline2" height="0" width="500">
+      <line style="stroke:rgb(0,0,0);stroke-width:2" />
+  </svg>
+  <div class="side_nav" id="side_nav">
+    <div class="side_nav_item" id="home">virtual facility</div>
+    <div class="side_nav_item" id="visceral">EA visceral</div>
+    <div class="side_nav_item" id="maxis">EA maxis</div>
+    <div class="side_nav_item" id="collegebacker">collegebacker</div>
+    <div class="side_nav_item" id="tesla">tesla</div>
+    <br><br>
+    <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
+  </div>
+    <br><br>
+
       <h2 class="subtitle">the challenge</h2>
       <p class="content">While I worked on multiple features, one of biggest challenges I tackled was the entire onboarding process for parents looking to set up a CollegeBacker account for their child attending Intrepid Academy. Intrepid Academy is a CollegeBacker partner that provides grants to their students who set up accounts, rewarding families over years of attendance. My task was to design the entire flow a parent would take from their first time setting up the account to submitting their 529 application. This challenge took about 3 weeks from start to user testing.</p>
       <h2 class="subtitle">the users</h2>
@@ -57,8 +58,38 @@
       <p class="content">One step of the flow underwent multiple changes was the confirmation page right before the user of an institution-owned - as opposed to a parent-owned - account made the first contribution to their child's savings account. By default, Intrepid Academy parents are automatically set up with an institution-owned account, which does not require the parent's personal identifiable information necessary for a parent-owned account.Instead of presenting the user with their current limitations straight away, we chose to display the benefits of switching accounts before informing the user of the drawbacks of the current one. By starting with a positive screen, we offer the user an opportunity for greater control over their contributions, rather than intimidating them from contributing right away.<br>
         <br><br>
 </div>
+<script>
+  function styleMenuSelection() {
+    var home = GetElementInsideContainer("side_nav","home");
+    var visceral = GetElementInsideContainer("side_nav","visceral");
+    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+    var tesla = GetElementInsideContainer("side_nav","tesla");
+    var maxis = GetElementInsideContainer("side_nav","maxis");
 
-</section>
+    var projectPath = window.location.pathname.replace('/', '')
+
+    switch(projectPath) {
+      case 'visceral.html':
+        visceral.style.fontWeight = 'bold'
+        break
+      case 'index.html': 
+        home.style.fontWeight = 'bold'
+        break
+      case 'collegebacker.html':
+        collegebacker.style.fontWeight = 'bold'
+        break
+      case 'tesla.html':
+        tesla.style.fontWeight = 'bold'
+        break
+      case 'maxis.html':
+        maxis.style.fontWeight = 'bold'
+        break
+      default:
+        break
+    }
+
+  }
+</script>
 <script>
   //from nnnnnn on stackoverflow
   function GetElementInsideContainer(containerID, childID) {
@@ -83,13 +114,14 @@
     tesla.onclick = function () {
       location.href = "tesla.html";
     };
+    resume.onclick = function() {
+      location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
+    }
 </script>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js'></script>
 <script  src="./timeline.js"></script>
 <script type="text/javascript" src="onepage/jquery.onepage-scroll.js"></script>
-
-</div>
 </body>
 </html>

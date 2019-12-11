@@ -11,20 +11,22 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 
-<body style="overflow-y: auto;scroll-behavior: smooth">
+<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
 <div class="page-container">
-	<h1 id="page_title2">visceral</h1>   	
-	<svg id="page_underline2" height="0" width="500">
-			<line style="stroke:rgb(0,0,0);stroke-width:2" />
-	</svg>
-	<div class="side_nav" id="side_nav">
-        <div class="side_nav_item" id="home">home</div>
-        <div class="side_nav_item" id="visceral">EA visceral</div>
-        <div class="side_nav_item" id="maxis">EA maxis</div>
-        <div class="side_nav_item" id="collegebacker">collegebacker</div>
-        <div class="side_nav_item" id="tesla">tesla</div>
-    </div>
+<h1 id="page_title2">melody ting</h1>     
+  <svg id="page_underline2" height="0" width="500">
+      <line style="stroke:rgb(0,0,0);stroke-width:2" />
+  </svg>
+  <div class="side_nav" id="side_nav">
+    <div class="side_nav_item" id="home">virtual facility</div>
+    <div class="side_nav_item" id="visceral">EA visceral</div>
+    <div class="side_nav_item" id="maxis">EA maxis</div>
+    <div class="side_nav_item" id="collegebacker">collegebacker</div>
+    <div class="side_nav_item" id="tesla">tesla</div>
     <br><br>
+    <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
+  </div>
+  <br><br>
 	<h2 class="subtitle">overview</h2>
 	<p class="content">The UX team at Visceral consisted of two full-time motion graphics/designers, four engineers, a QA engineer, and a product manager. Throughout my time there, I worked most closely with the two other designers to create motion mock ups, and UI. </p>
 	<h2 class="subtitle">fictional UI</h2>
@@ -43,11 +45,44 @@
 	</video>
   <br><br>
 </div>
+<script>
+  function styleMenuSelection() {
+    var home = GetElementInsideContainer("side_nav","home");
+    var visceral = GetElementInsideContainer("side_nav","visceral");
+    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+    var tesla = GetElementInsideContainer("side_nav","tesla");
+    var maxis = GetElementInsideContainer("side_nav","maxis");
+
+    var projectPath = window.location.pathname.replace('/', '')
+
+    switch(projectPath) {
+      case 'visceral.html':
+        visceral.style.fontWeight = 'bold'
+        break
+      case 'index.html': 
+        home.style.fontWeight = 'bold'
+        break
+      case 'collegebacker.html':
+        collegebacker.style.fontWeight = 'bold'
+        break
+      case 'tesla.html':
+        tesla.style.fontWeight = 'bold'
+        break
+      case 'maxis.html':
+        maxis.style.fontWeight = 'bold'
+        break
+      default:
+        break
+    }
+
+  }
+</script>
 <script type="text/javascript">
     //from nnnnnn on stackoverflow
 	function GetElementInsideContainer(containerID, childID) {
     var elm = document.getElementById(childID);
     var parent = elm ? elm.parentNode : {};
+
     return (parent.id && parent.id === containerID) ? elm : {};
 	};
   
@@ -68,6 +103,9 @@
     collegebacker.onclick = function () {
     	location.href = "collegebacker-protected.html";
     };
+    resume.onclick = function() {
+      location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
+    }
 </script>
 </body>
 </html>

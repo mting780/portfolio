@@ -370,7 +370,7 @@ h5.timeline-slide__content{
 }
 
 #page_title2{
-  position: relative;
+  position: absolute;
   text-align: left;
   left: 5%;
   top: 5%;
@@ -399,7 +399,7 @@ h5.timeline-slide__content{
   position: absolute;
   width: 104px;
   left: 5%;
-  top: 13%;
+  top: 15%;
   border: 2px solid #000000;
   stroke: 2px solid #4c4c4c;
   z-index: 2;

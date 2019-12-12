@@ -1,7 +1,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Melody Ting</title>
   <meta name="description" content="Melody Ting">
   <meta name="author" content="SitePoint">
@@ -10,45 +9,83 @@
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-<br><br>
-<body style="overflow-y: auto;scroll-behavior: smooth">
-<div class="page-container">
-	<h1 id="page_title2">melody ting</h1>   	
-	<svg id="page_underline2" height="0" width="500">
-			<line style="stroke:rgb(0,0,0);stroke-width:2" />
-	</svg>
-	<div class="side_nav" id="side_nav">
-    <div class="side_nav_item" id="home">virtual facility</div>
+<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+  <div class="page-container">
+  <h1 id="page_title2">melody ting</h1>     
+  <svg id="page_underline2" height="0" width="500">
+      <line style="stroke:rgb(0,0,0);stroke-width:2" />
+  </svg>
+  <div class="side_nav" id="side_nav">
+    <div class="side_nav_item" id="home">about</div>
     <div class="side_nav_item" id="visceral">EA visceral</div>
     <div class="side_nav_item" id="maxis">EA maxis</div>
     <div class="side_nav_item" id="collegebacker">collegebacker</div>
     <div class="side_nav_item" id="tesla">tesla</div>
+    <div class="side_nav_item" id="orai">orai</div>
     <br><br>
     <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
   </div>
-  <br><br>
-	<h2 class="subtitle">overview</h2>
-	<p class="content">Virtual Facility is a SAAS that empowers facilities to target alarms, optimize operations, and create better work. The core product consists of an alarm triaging software that enables users to quickly identify alarms, target root causes and identify opportunities to create better work.</p>
-  <h2 class="subtitle">what i do </h2>
-  <p class="content">As one of two designers on the team, my responsibilities span the entire spectrum of design - from brainstorming and prototyping core features to conducting user interviews and distilling feedback. My coworker and fellow designer <a href="https://rolanddubois.com/">Roland Dubois</a> have been tasked with establishing the design system and foundation for the web platform and are in the process of documenting our entire process. For more information on specific projects I have been working on, please reach out to me directly via email or <a href="linkedin.com/in/melody-ting">Linkedin</a>. </p>
+    <br><br>
+    <h2 class="subtitle">overview</h2>
+    <p class="content"><a href="https://oraiapp.com">Orai</a> is a mobile communication coach that empowers users to become stronger, more confident communicators through interactive lessons, tips, and assessments. We were a small team of fewer than 20 people based primarily in Philadelphia, USA, but with various teammates scattered around the globe. I was laid off in June 2019 due to the team's financial shortcomings. </p>
+    <h2 class="subtitle">what I did</h2>
+    <p class="content">As a member of the design team, I worked alongside the design lead and an instructional designer to create original content, streamline the design system, and design consumer-facing content that reached millions of users worldwide.</p>
+    <h2 class="subtitle">the problem</h2>
+    <p class="content">One of the most challenging issues I tackled during my time at Orai was improving user retention. Orai was experiencing an overwhelming number of user dropout after a week of 'bingeing' on lesson content. Users were also consuming content at a higher rate than the team was able to produce. </p>
+    <br>
 
-</div>
+    <p class="content" style="font-weight: bolder">more documentation to come</p>
+    <br><br>
+  </div>
+<script>
+  function styleMenuSelection() {
+    var home = GetElementInsideContainer("side_nav","home");
+    var visceral = GetElementInsideContainer("side_nav","visceral");
+    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+    var tesla = GetElementInsideContainer("side_nav","tesla");
+    var maxis = GetElementInsideContainer("side_nav","maxis");
+    var orai = GetElementInsideContainer("side_nav","orai");
+
+    var projectPath = window.location.pathname.replace('/', '')
+
+    switch(projectPath) {
+      case 'visceral.html':
+        visceral.style.fontWeight = 'bolder'
+        break
+      case 'index.html': 
+        home.style.fontWeight = 'bolder'
+        break
+      case 'collegebacker.html':
+        collegebacker.style.fontWeight = 'bolder'
+        break
+      case 'tesla.html':
+        tesla.style.fontWeight = 'bolder'
+        break
+      case 'maxis.html':
+        maxis.style.fontWeight = 'bolder'
+        break
+      case 'orai.html':
+        orai.style.fontWeight = "bolder"
+      default:
+        break
+    }
+
+  }
+</script>
 <script type="text/javascript">
     //from nnnnnn on stackoverflow
-	function GetElementInsideContainer(containerID, childID) {
+  function GetElementInsideContainer(containerID, childID) {
     var elm = document.getElementById(childID);
-
     var parent = elm ? elm.parentNode : {};
-    return (parent.id && parent.id === containerID) ? elm : {};
 
-	};
+    return (parent.id && parent.id === containerID) ? elm : {};
+  };
   
-	var home = GetElementInsideContainer("side_nav","home");
-	var tesla = GetElementInsideContainer("side_nav","tesla");
-	var maxis = GetElementInsideContainer("side_nav","maxis");
-  var visceral = GetElementInsideContainer("side_nav","visceral");
-	var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var resume = GetElementInsideContainer("side_nav","resume");
+  var home = GetElementInsideContainer("side_nav","home");
+  var tesla = GetElementInsideContainer("side_nav","tesla");
+  var maxis = GetElementInsideContainer("side_nav","maxis");
+  var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+  var orai = GetElementInsideContainer("side_nav","orai");
 
     home.onclick = function () {
       location.href = "index.html";
@@ -56,18 +93,22 @@
     tesla.onclick = function () {
         location.href = "tesla.html";
     };
+    visceral.onclick = function () {
+      location.href = "visceral.html"
+    };
     maxis.onclick = function () {
         location.href = "maxis.html";
     };
-    visceral.onclick=function (){
-      location.href = "visceral.html"
-    }
     collegebacker.onclick = function () {
-    	location.href = "collegebacker.html";
+      location.href = "collegebacker-protected.html";
     };
+    orai.onclick = function (){
+      location.href = "orai.html";
+    }
     resume.onclick = function() {
       location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
     }
+
 </script>
 </body>
 </html>

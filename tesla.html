@@ -18,11 +18,12 @@
 			<line style="stroke:rgb(0,0,0);stroke-width:2" />
 	</svg>
 	<div class="side_nav" id="side_nav">
-        <div class="side_nav_item" id="home">virtual facility</div>
+        <div class="side_nav_item" id="home">about</div>
         <div class="side_nav_item" id="visceral">EA visceral</div>
         <div class="side_nav_item" id="maxis">EA maxis</div>
         <div class="side_nav_item" id="collegebacker">collegebacker</div>
         <div class="side_nav_item" id="tesla">tesla</div>
+        <div class="side_nav_item" id="orai">orai</div>
         <br><br>
         <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
   	</div>
@@ -72,25 +73,28 @@
     var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
     var tesla = GetElementInsideContainer("side_nav","tesla");
     var maxis = GetElementInsideContainer("side_nav","maxis");
+    var orai = GetElementInsideContainer("side_nav","orai");
 
     var projectPath = window.location.pathname.replace('/', '')
 
     switch(projectPath) {
       case 'visceral.html':
-        visceral.style.fontWeight = 'bold'
+        visceral.style.fontWeight = 'bolder'
         break
       case 'index.html': 
-        home.style.fontWeight = 'bold'
+        home.style.fontWeight = 'bolder'
         break
-      case 'collegebacker-protected.html':
-        collegebacker.style.fontWeight = 'bold'
+      case 'collegebacker.html':
+        collegebacker.style.fontWeight = 'bolder'
         break
       case 'tesla.html':
-        tesla.style.fontWeight = 'bold'
+        tesla.style.fontWeight = 'bolder'
         break
       case 'maxis.html':
-        maxis.style.fontWeight = 'bold'
+        maxis.style.fontWeight = 'bolder'
         break
+      case 'orai.html':
+        orai.style.fontWeight = "bolder"
       default:
         break
     }
@@ -98,28 +102,39 @@
   }
 </script>
 <script type="text/javascript">
-	//from nnnnnn on stackoverflow
-	function GetElementInsideContainer(containerID, childID) {
+    //from nnnnnn on stackoverflow
+  function GetElementInsideContainer(containerID, childID) {
     var elm = document.getElementById(childID);
     var parent = elm ? elm.parentNode : {};
+
     return (parent.id && parent.id === containerID) ? elm : {};
-	};
-	var home = GetElementInsideContainer("side_nav","home");
-	var visceral = GetElementInsideContainer("side_nav","visceral");
-	var maxis = GetElementInsideContainer("side_nav","maxis");
-	var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+  };
+  
+  var home = GetElementInsideContainer("side_nav","home");
+  var tesla = GetElementInsideContainer("side_nav","tesla");
+  var visceral = GetElementInsideContainer("side_nav","visceral");
+  var maxis = GetElementInsideContainer("side_nav","maxis");
+  var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+  var orai = GetElementInsideContainer("side_nav","orai");
+
     home.onclick = function () {
-    	location.href = "index.html";
-    }
+      location.href = "index.html";
+    };
+    tesla.onclick = function () {
+        location.href = "tesla.html";
+    };
     visceral.onclick = function () {
-        location.href = "visceral.html";
+    	location.href = "visceral.html"
     };
     maxis.onclick = function () {
         location.href = "maxis.html";
     };
     collegebacker.onclick = function () {
-    	location.href = "collegebacker-protected.html";
+      location.href = "collegebacker-protected.html";
     };
+    orai.onclick = function (){
+      location.href = "orai.html";
+    }
     resume.onclick = function() {
       location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
     }

@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Melody Ting</title>
+  <meta name="description" content="Melody Ting">
+  <meta name="author" content="SitePoint">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
+  <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<div class="page-container">
+	<h1 id="page_title2">melody ting</h1>   	
+	<svg id="page_underline2" height="0" width="500">
+			<line style="stroke:rgb(0,0,0);stroke-width:2"/>
+	</svg>
+	<div class="side_nav" id="side_nav">
+    <div class="side_nav_item" id="home" style="font-weight:bolder">about</div>
+    <div class="side_nav_item" id="visceral">EA visceral</div>
+    <div class="side_nav_item" id="maxis">EA maxis</div>
+    <div class="side_nav_item" id="collegebacker">collegebacker</div>
+    <div class="side_nav_item" id="tesla">tesla</div>
+    <div class="side_nav_item" id="orai">orai</div>    
+    <div class="side_nav_item" id="cabinet">cabinet</div>
+    <br><br>
+    <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
+  </div>
+  <br><br>
+	<h2 class="subtitle">overview</h2>
+	<p class="content"><a href="https://wearecabinet.com/">Cabinet</a> is a direct-to-consumer (DTC) company that provides over the counter (OTC) medication to customers through curated kits. Their customized medicine bottles feature near-field technology that allows users to literally tap into; users can tap the bottles with their NFC enabled smartphones to surface a digital site that provides full transparency into the contents, construction, and sourcing of the medication.</p>
+  <h2 class="subtitle">what i did </h2>
+  <p class="content">As a design consultant, I worked directly with co-founder Russ Gong to create a user journey, distill feedback and data from initial user research, and conceptualize the first version of their NFC digital experience. 
+</p>
+  <h2 class="subtitle">user research </h2>
+  <img class="visuals" src="Work_Documentation/cabinet/userjourney0.png">
+  <p class="content">The team had already collected initial user feedback from initial interviews with early adopters and targeted ads on social media. I compiled this information into an initial user journey for the process of purchasing OTC medicine. Questions we hoped to answer through this user journey included: <br>
+  <br>
+  How does the process of purchasing medication exist now? <br>
+  How does it exist on Cabinet? <br>
+  What pain points can Cabinet alleviate in this process?</p>
+  <img class="visuals" src="Work_Documentation/cabinet/personas.PNG">
+  <p class="content">I also created a set of user personas to visualize Cabinet's target user group. Russ and I worked together to identify four personas who shared similar lifestyle and purchasing habits, based on the data we were able to gather from the targeted ads and initial users.</p>
+  <h2 class="subtitle">app experience</h2>
+  <p class="content">In addition to conducting user research, I conceptualized and designed a digital experience for the NFC bottles that would surface key pieces of information - ingredients, uses, sourcing, etc. - when users tapped the bottles with their phones.</p>
+  <img class="visuals" src="Work_Documentation/cabinet/Cabinet_NFC_Mobile-HiFi.png">
+  <p class="content">I created a site map to highlight key features followed by wireframes.</p>
+  <img class="visuals" style="vertical-align: center; height: 60%" src="Work_Documentation/cabinet/Cabinet_Wires.png">
+  <h2 class="subtitle">final version</h2>
+  <video class="visuals"  height="70%" controls>
+  <source src="Work_Documentation/cabinet/NFC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  <p class="content">A working version of the NFC experience with the tappable bottles.</p>
+
+</div>
+<script>
+  function styleMenuSelection() {
+    var home = GetElementInsideContainer("side_nav","home");
+    var visceral = GetElementInsideContainer("side_nav","visceral");
+    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+    var tesla = GetElementInsideContainer("side_nav","tesla");
+    var maxis = GetElementInsideContainer("side_nav","maxis");
+    var orai = GetElementInsideContainer("side_nav","orai");
+
+    var projectPath = window.location.pathname.replace('/', '')
+
+    switch(projectPath) {
+      case 'visceral.html':
+        visceral.style.fontWeight = 'bolder'
+        break
+      case 'index.html': 
+        home.style.fontWeight = 'bolder'
+        break
+      case 'collegebacker.html':
+        collegebacker.style.fontWeight = 'bolder'
+        break
+      case 'tesla.html':
+        tesla.style.fontWeight = 'bolder'
+        break
+      case 'maxis.html':
+        maxis.style.fontWeight = 'bolder'
+        break
+      case 'orai.html':
+        orai.style.fontWeight = "bolder"
+      default:
+        break
+    }
+
+  }
+</script>
+<script type="text/javascript">
+    //from nnnnnn on stackoverflow
+  function GetElementInsideContainer(containerID, childID) {
+    var elm = document.getElementById(childID);
+    var parent = elm ? elm.parentNode : {};
+
+    return (parent.id && parent.id === containerID) ? elm : {};
+  };
+  
+  var home = GetElementInsideContainer("side_nav","home");
+  var tesla = GetElementInsideContainer("side_nav","tesla");
+  var visceral = GetElementInsideContainer("side_nav","visceral");
+  var maxis = GetElementInsideContainer("side_nav","maxis");
+  var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
+  var orai = GetElementInsideContainer("side_nav","orai");
+
+    home.onclick = function () {
+      location.href = "index.html";
+    };
+    tesla.onclick = function () {
+        location.href = "tesla.html";
+    };
+    visceral.onclick = function () {
+      location.href = "visceral.html"
+    };
+    maxis.onclick = function () {
+        location.href = "maxis.html";
+    };
+    collegebacker.onclick = function () {
+      location.href = "collegebacker-protected.html";
+    };
+    orai.onclick = function (){
+      location.href = "orai.html";
+    }
+    resume.onclick = function() {
+      location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
+    }
+</script>
+</body>
+</html>

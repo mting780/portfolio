@@ -21,7 +21,8 @@
     <div class="side_nav_item" id="maxis">EA maxis</div>
     <div class="side_nav_item" id="collegebacker">collegebacker</div>
     <div class="side_nav_item" id="tesla">tesla</div>
-    <div class="side_nav_item" id="orai">orai</div>    
+    <div class="side_nav_item" id="orai">orai</div>   
+    <div class="side_nav_item" id="cabinet">cabinet</div> 
     <br><br>
     <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
   </div>
@@ -41,6 +42,7 @@
     var tesla = GetElementInsideContainer("side_nav","tesla");
     var maxis = GetElementInsideContainer("side_nav","maxis");
     var orai = GetElementInsideContainer("side_nav","orai");
+    var cabinet = GetElementInsideContainer("side_nav","cabinet");
 
     var projectPath = window.location.pathname.replace('/', '')
 
@@ -59,6 +61,9 @@
         break
       case 'maxis.html':
         maxis.style.fontWeight = 'bolder'
+        break
+      case 'cabinet.html':
+        cabinet.style.fontWeight = 'bolder'
         break
       case 'orai.html':
         orai.style.fontWeight = "bolder"
@@ -82,7 +87,7 @@
   var visceral = GetElementInsideContainer("side_nav","visceral");
   var maxis = GetElementInsideContainer("side_nav","maxis");
   var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var orai = GetElementInsideContainer("side_nav","orai");
+  var cabinet = GetElementInsideContainer("side_nav","cabinet");
 
     home.onclick = function () {
       location.href = "index.html";
@@ -101,6 +106,9 @@
     };
     orai.onclick = function (){
       location.href = "orai.html";
+    };
+    cabinet.onclick = function (){
+      location.href = "cabinet.html";
     }
     resume.onclick = function() {
       location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"

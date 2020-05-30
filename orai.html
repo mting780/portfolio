@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<body style="overflow-y: auto;scroll-behavior: smooth">
   <div class="page-container">
   <h1 id="page_title2">melody ting</h1>     
   <svg id="page_underline2" height="0" width="500">
@@ -21,7 +21,7 @@
     <div class="side_nav_item" id="maxis">EA maxis</div>
     <div class="side_nav_item" id="collegebacker">collegebacker</div>
     <div class="side_nav_item" id="tesla">tesla</div>
-    <div class="side_nav_item" id="orai">orai</div>
+    <div class="side_nav_item" style="font-weight:bolder" id="orai">orai</div>
     <div class="side_nav_item" id="cabinet">cabinet</div> 
     <br><br>
     <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
@@ -37,12 +37,12 @@
     <p class="content">
     <a href="https://trainingindustry.com/articles/content-development/knowledge-retention-tactics-for-more-effective-learning"> Research</a> demonstrates that repeated, consistent exposure to concepts is the most effective method for strengthening learning retention. I examined popular and effective learning apps to identify how they employed different methods to encourage users to return.</p><br>
     <p class="content">Our understanding of learning science served as the foundation for the redesign and informed our approach, which exposed users to consistent material in short doses throughout the day and encouraged regular practice.</p>
-    <img class="visuals" src="Work_Documentation/Orai_wireframing.jpg">
+    <img class="visuals" src="Work_Documentation/Orai_Weekly.png">
     <p class="content">I conducted user interviews with existing users - both within our enterprise client teams and individual users - to learn more about our users' learning objectives. I learned that users were eager to learn new content, but exhausted material too quickly. They would 'binge' the app but found little reason to return after they finished their lessons. While we loved that users were so excited by the content that they would exhaust the lessons so quickly, we also recognized the importance of practicing material and refining skills. As such, we decided to introduce cadence setting.</p>
-    <img class="visuals" src="Work_Documentation/Cadence_guided.jpg">
+    <img class="visuals" src="Work_Documentation/Orai_Daily.png">
     <p class="content">While the original experience allowed users to pick and choose from an open collection of lessons, the new approach was regimented - users would complete a quiz as part of their onboarding to better determine their personal learning objectives. From there, their results would determine which lesson pack was most appropriate for their learning goals. The lesson packs were designed to span 5-days and included a combination of new material and reinforcing learned content.</p>
-    <img class="visuals" src="Work_Documentation/Cadence_lesson.jpg">
-    <p class="content">I created an animated mock-up to demonstrate interaction and flow.</p>
+<!--     <img class="visuals" src="Work_Documentation/Cadence_lesson.jpg">
+ -->    <p class="content">I created an animated mock-up to demonstrate interaction and flow.</p>
      <video class="visuals" width="50%" height="50%" controls>
         <source src="Work_Documentation/Cadence_v1.mp4">
     </video>
@@ -51,88 +51,6 @@
   
     <br><br>
   </div>
-<script>
-  function styleMenuSelection() {
-    var home = GetElementInsideContainer("side_nav","home");
-    var visceral = GetElementInsideContainer("side_nav","visceral");
-    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-    var tesla = GetElementInsideContainer("side_nav","tesla");
-    var maxis = GetElementInsideContainer("side_nav","maxis");
-    var orai = GetElementInsideContainer("side_nav","orai");
-    var cabinet = GetElementInsideContainer("side_nav","cabinet");
-
-    var projectPath = window.location.pathname.replace('/', '')
-
-    switch(projectPath) {
-      case 'visceral.html':
-        visceral.style.fontWeight = 'bolder'
-        break
-      case 'index.html': 
-        home.style.fontWeight = 'bolder'
-        break
-      case 'collegebacker.html':
-        collegebacker.style.fontWeight = 'bolder'
-        break
-      case 'tesla.html':
-        tesla.style.fontWeight = 'bolder'
-        break
-      case 'maxis.html':
-        maxis.style.fontWeight = 'bolder'
-        break
-      case 'cabinet.html':
-        cabinet.style.fontWeight = 'bolder'
-        break
-      case 'orai.html':
-        orai.style.fontWeight = "bolder"
-      default:
-        break
-    }
-
-  }
-</script>
-<script type="text/javascript">
-    //from nnnnnn on stackoverflow
-  function GetElementInsideContainer(containerID, childID) {
-    var elm = document.getElementById(childID);
-    var parent = elm ? elm.parentNode : {};
-
-    return (parent.id && parent.id === containerID) ? elm : {};
-  };
-  
-  var home = GetElementInsideContainer("side_nav","home");
-  var tesla = GetElementInsideContainer("side_nav","tesla");
-  var maxis = GetElementInsideContainer("side_nav","maxis");
-  var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var orai = GetElementInsideContainer("side_nav","orai");
-  var cabinet = GetElementInsideContainer("side_nav","cabinet");
-
-
-
-    home.onclick = function () {
-      location.href = "index.html";
-    };
-    tesla.onclick = function () {
-        location.href = "tesla.html";
-    };
-    visceral.onclick = function () {
-      location.href = "visceral.html"
-    };
-    maxis.onclick = function () {
-        location.href = "maxis.html";
-    };
-    collegebacker.onclick = function () {
-      location.href = "collegebacker-protected.html";
-    };
-    orai.onclick = function (){
-      location.href = "orai.html";
-    };
-    cabinet.onclick = function (){
-      location.href = "cabinet.html";
-    }
-    resume.onclick = function() {
-      location.href ="resume.pdf"
-    }
-
-</script>
+<script type="text/javascript" src="page_nav.js"></script>
 </body>
 </html>

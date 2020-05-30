@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<body style="overflow-y: auto;scroll-behavior: smooth">
     	<div class="page-container">
     		<h1 id="page_title2">melody ting</h1>     
   <svg id="page_underline2" height="0" width="500">
@@ -18,7 +18,7 @@
   <div class="side_nav" id="side_nav">
         <div class="side_nav_item" id="home">about</div>
         <div class="side_nav_item" id="visceral">EA visceral</div>
-        <div class="side_nav_item" id="maxis">EA maxis</div>
+        <div class="side_nav_item" style="font-weight:bolder" id="maxis">EA maxis</div>
         <div class="side_nav_item" id="collegebacker">collegebacker</div>
         <div class="side_nav_item" id="tesla">tesla</div>
         <div class="side_nav_item" id="orai">orai</div>
@@ -58,85 +58,10 @@
         <br>
 </div>
 <script>
-  function styleMenuSelection() {
-    var home = GetElementInsideContainer("side_nav","home");
-    var visceral = GetElementInsideContainer("side_nav","visceral");
-    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-    var tesla = GetElementInsideContainer("side_nav","tesla");
-    var maxis = GetElementInsideContainer("side_nav","maxis");
-    var orai = GetElementInsideContainer("side_nav","orai");
-    var cabinet = GetElementInsideContainer("side_nav","cabinet");
 
-    var projectPath = window.location.pathname.replace('/', '')
-
-    switch(projectPath) {
-      case 'visceral.html':
-        visceral.style.fontWeight = 'bolder'
-        break
-      case 'index.html': 
-        home.style.fontWeight = 'bolder'
-        break
-      case 'collegebacker.html':
-        collegebacker.style.fontWeight = 'bolder'
-        break
-      case 'tesla.html':
-        tesla.style.fontWeight = 'bolder'
-        break
-      case 'maxis.html':
-        maxis.style.fontWeight = 'bolder'
-        break
-      case 'cabinet.html':
-        cabinet.style.fontWeight = 'bolder'
-        break
-      case 'orai.html':
-        orai.style.fontWeight = "bolder"
-      default:
-        break
-    }
-
-  }
 </script>
-<script type="text/javascript">
-    //from nnnnnn on stackoverflow
-  function GetElementInsideContainer(containerID, childID) {
-    var elm = document.getElementById(childID);
-    var parent = elm ? elm.parentNode : {};
+<script type="text/javascript" src="page_nav.js"></script>
 
-    return (parent.id && parent.id === containerID) ? elm : {};
-  };
-  
-  var home = GetElementInsideContainer("side_nav","home");
-  var tesla = GetElementInsideContainer("side_nav","tesla");
-  var visceral = GetElementInsideContainer ("side_nav", "visceral");
-  var maxis = GetElementInsideContainer("side_nav","maxis");
-  var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var orai = GetElementInsideContainer("side_nav","orai");
-
-    home.onclick = function () {
-      location.href = "index.html";
-    };
-    tesla.onclick = function () {
-        location.href = "tesla.html";
-    };
-    visceral.onclick = function () {
-      location.href = "visceral.html"
-    };
-    maxis.onclick = function () {
-        location.href = "maxis.html";
-    };
-    collegebacker.onclick = function () {
-      location.href = "collegebacker-protected.html";
-    };
-    orai.onclick = function (){
-      location.href = "orai.html";
-    };
-    cabinet.onclick = function (){
-      location.href = "cabinet.html";
-    }
-    resume.onclick = function() {
-      location.href ="resume.pdf"
-    }
-</script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js'></script>
 <script  src="./timeline.js"></script>

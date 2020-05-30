@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<body style="overflow-y: auto;scroll-behavior: smooth">
 <div class="page-container">
 	<h1 id="page_title2">melody ting</h1>   	
 	<svg id="page_underline2" height="0" width="500">
@@ -22,7 +22,7 @@
     <div class="side_nav_item" id="collegebacker">collegebacker</div>
     <div class="side_nav_item" id="tesla">tesla</div>
     <div class="side_nav_item" id="orai">orai</div>    
-    <div class="side_nav_item" id="cabinet">cabinet</div>
+    <div class="side_nav_item" style="font-weight:bolder" id="cabinet">cabinet</div>
     <br><br>
     <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
   </div>
@@ -43,7 +43,7 @@
   <p class="content">I also created a set of user personas to visualize Cabinet's target user group. Russ and I worked together to identify four personas who shared similar lifestyle and purchasing habits, based on the data we were able to gather from the targeted ads and initial users.</p>
   <h2 class="subtitle">app experience</h2>
   <p class="content">In addition to conducting user research, I conceptualized and designed a digital experience for the NFC bottles that would surface key pieces of information - ingredients, uses, sourcing, etc. - when users tapped the bottles with their phones.</p>
-  <img class="visuals" src="Work_Documentation/cabinet/Cabinet_NFC_Mobile-HiFi.png">
+  <img class="visuals" src="Work_Documentation/cabinet/cabinet_experience.png">
   <p class="content">I created a site map to highlight key features followed by wireframes.</p>
   <img class="visuals" style="vertical-align: center; height: 60%" src="Work_Documentation/cabinet/Cabinet_Wires.png">
   <h2 class="subtitle">final version</h2>
@@ -54,78 +54,7 @@
   <p class="content">A working version of the NFC experience with the tappable bottles.</p><br>
 
 </div>
-<script>
-  function styleMenuSelection() {
-    var home = GetElementInsideContainer("side_nav","home");
-    var visceral = GetElementInsideContainer("side_nav","visceral");
-    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-    var tesla = GetElementInsideContainer("side_nav","tesla");
-    var maxis = GetElementInsideContainer("side_nav","maxis");
-    var orai = GetElementInsideContainer("side_nav","orai");
+<script type="text/javascript" src="page_nav.js"></script>
 
-    var projectPath = window.location.pathname.replace('/', '')
-
-    switch(projectPath) {
-      case 'visceral.html':
-        visceral.style.fontWeight = 'bolder'
-        break
-      case 'index.html': 
-        home.style.fontWeight = 'bolder'
-        break
-      case 'collegebacker.html':
-        collegebacker.style.fontWeight = 'bolder'
-        break
-      case 'tesla.html':
-        tesla.style.fontWeight = 'bolder'
-        break
-      case 'maxis.html':
-        maxis.style.fontWeight = 'bolder'
-        break
-      case 'orai.html':
-        orai.style.fontWeight = "bolder"
-      default:
-        break
-    }
-
-  }
-</script>
-<script type="text/javascript">
-    //from nnnnnn on stackoverflow
-  function GetElementInsideContainer(containerID, childID) {
-    var elm = document.getElementById(childID);
-    var parent = elm ? elm.parentNode : {};
-
-    return (parent.id && parent.id === containerID) ? elm : {};
-  };
-  
-  var home = GetElementInsideContainer("side_nav","home");
-  var tesla = GetElementInsideContainer("side_nav","tesla");
-  var visceral = GetElementInsideContainer("side_nav","visceral");
-  var maxis = GetElementInsideContainer("side_nav","maxis");
-  var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var orai = GetElementInsideContainer("side_nav","orai");
-
-    home.onclick = function () {
-      location.href = "index.html";
-    };
-    tesla.onclick = function () {
-        location.href = "tesla.html";
-    };
-    visceral.onclick = function () {
-      location.href = "visceral.html"
-    };
-    maxis.onclick = function () {
-        location.href = "maxis.html";
-    };
-    collegebacker.onclick = function () {
-      location.href = "collegebacker-protected.html";
-    };
-    orai.onclick = function (){
-      location.href = "orai.html";
-    }
-    resume.onclick = function() {
-      location.href ="resume.pdf"
-    }
-</script>
 </body>
 </html>

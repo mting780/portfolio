@@ -498,12 +498,49 @@ i {
 }
 
 
+.col{
+  float:left;
+  padding: 10px;
+  width:25%;
+  text-align:center;
+  margin: 0 auto;
+  position:relative;
+}
+
+.row{
+  margin-left:30%;
+  width:inherit;
+  padding: 15px 0px 15px 0px
+}
+
+.inline_visual{
+  width:80%;
+  margin: 20 auto;
+  width:180px;
+  height:180px;
+  z-index: 100;
+}
+
+.overlay_visual{
+  width:80%;
+  width:180px;
+  margin:20 auto;
+  left:60;
+  height:180px;
+  z-index: 0;
+  position:absolute;
+  opacity:0;
+}
+.overlay_visual:hover{
+  opacity:100%;
+}
+
 .visuals {
   max-width: 50%;
   align-content: center;
   display: block;
   position: relative;
-  left: 40%;
+  left: 30%;
   margin-top: 20px;
   margin-bottom: 30px;
 }

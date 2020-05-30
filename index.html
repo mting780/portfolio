@@ -8,8 +8,32 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script>
+    function indexNav(x){
+      let item = x['id']
+      console.log(item)
+      switch (item) {
+        case 'visceral_illo': location.href="visceral.html"
+        break;
+        case 'sims_illo': location.href="maxis.html"
+        break;
+        case 'collegebacker_illo': location.href="collegebacker-protected.html"
+        break;
+        case 'tesla_illo': location.href="tesla.html"
+        break;
+        case 'orai_illo': location.href="orai.html"
+        break;
+        case 'cabinet_illo': location.href="cabinet.html"
+        break;
+        default: location.href="index.html"
+      }
+
+
+    }
+
+  </script>
 </head>
-<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<body style="overflow-y: auto;scroll-behavior: smooth">
 <div class="page-container">
 	<h1 id="page_title2">melody ting</h1>   	
 	<svg id="page_underline2" height="0" width="500">
@@ -28,91 +52,50 @@
   </div>
   <br><br>
 	<h2 class="subtitle">who am i</h2>
-	<p class="content">Hello, I'm Melody. I'm a digital product designer specializing in designing intuitive solutions for data-intensive products. I'm passionate about creating impactful solutions with a user-centric approach and enjoy walking the fine line between art and design. I've had the opportunity to work on some cool projects, from creating UI for a <a href="/visceral.html"> Star Wars vehicle</a> to designing <a href="/tesla.html">semi-automated solutions </a> for Tesla's supply chain operations. </p><br>
+	<p class="content">Hello, I'm Melody. I'm a digital product designer specializing in intuitive solutions for data-intensive products. I'm passionate about creating impactful experiences with a user-centric approach and enjoy walking the fine line between art and design. I've had the opportunity to work on some cool projects, from creating UI for a <a href="/visceral.html"> Star Wars vehicle</a> to designing <a href="/tesla.html">semi-automated solutions </a> for Tesla's supply chain operations. </p>
   <p class="content"></p>
   <h2 class="subtitle">where i am now</h2>
   <p class="content">You can find me designing in midtown NYC at <a href="https://www.virtualfacility.ai/">Virtual Facility</a>, creating facility automation software.</p>
 
+  <h2 class="subtitle">explore projects</h2>
+  <!-- first row -->
+  <div class="row">
+    <div class="col" onclick="indexNav(this)" id="visceral_illo">
+      <img class="inline_visual" src="visceral_illo.png">
+      <img class="overlay_visual" src="visceral_overlay.png">
+      <h3 class="caption">Visceral | UX/UI</h3>
+    </div>
+    <div class="col" onclick="indexNav(this)" id="sims_illo" >
+      <img class="inline_visual" src="sims_illo.png">
+      <img class="overlay_visual" src="sims_overlay.png">
+      <h3 class="caption">Maxis | UX </h3>
+    </div>
+    <div class="col" onclick="indexNav(this)" id="collegebacker_illo">
+      <img class="inline_visual" src="Work_Documentation/collegebacker_illo.png">
+      <img class="overlay_visual" src="collegebacker_hover.png">
+      <h3 class="caption">Collegebacker | UX </h3>
+    </div>
+  </div>
+<!--second row-->    
+  <div class="row">
+    <div class="col" onclick="indexNav(this)" id="cabinet_illo">
+      <img class="inline_visual" src="cabinet_illo.png">
+      <img class="overlay_visual" src="cabinet_overlay.png">
+      <h3 class="caption">Cabinet | Design Consultant</h3>
+    </div>
+  <div class="col" onclick="indexNav(this)" id="orai_illo">
+      <img class="inline_visual" src="orai_illo.png">
+      <img class="overlay_visual" src="orai_overlay.png">
+      <h3 class="caption">Orai | Product Design</h3>
+  </div>
+  </div>
 </div>
 <script>
-  function styleMenuSelection() {
-    var home = GetElementInsideContainer("side_nav","home");
-    var visceral = GetElementInsideContainer("side_nav","visceral");
-    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-    var tesla = GetElementInsideContainer("side_nav","tesla");
-    var maxis = GetElementInsideContainer("side_nav","maxis");
-    var orai = GetElementInsideContainer("side_nav","orai");
-    var cabinet = GetElementInsideContainer("side_nav","cabinet");
-
-    var projectPath = window.location.pathname.replace('/', '')
-
-    switch(projectPath) {
-      case 'visceral.html':
-        visceral.style.fontWeight = 'bolder'
-        break
-      case 'index.html': 
-        home.style.fontWeight = 'bolder'
-        break
-      case 'collegebacker.html':
-        collegebacker.style.fontWeight = 'bolder'
-        break
-      case 'tesla.html':
-        tesla.style.fontWeight = 'bolder'
-        break
-      case 'maxis.html':
-        maxis.style.fontWeight = 'bolder'
-        break
-      case 'cabinet.html':
-        cabinet.style.fontWeight = 'bolder'
-        break
-      case 'orai.html':
-        orai.style.fontWeight = "bolder"
-      default:
-        break
-    }
-
+  function getGif(illo){
+    console.log('hello')
+    illo.style.opacity=0
   }
 </script>
-<script type="text/javascript">
-    //from nnnnnn on stackoverflow
-  function GetElementInsideContainer(containerID, childID) {
-    var elm = document.getElementById(childID);
-    var parent = elm ? elm.parentNode : {};
-
-    return (parent.id && parent.id === containerID) ? elm : {};
-  };
-  
-  var home = GetElementInsideContainer("side_nav","home");
-  var tesla = GetElementInsideContainer("side_nav","tesla");
-  var visceral = GetElementInsideContainer("side_nav","visceral");
-  var maxis = GetElementInsideContainer("side_nav","maxis");
-  var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var cabinet = GetElementInsideContainer("side_nav","cabinet");
-
-    home.onclick = function () {
-      location.href = "index.html";
-    };
-    tesla.onclick = function () {
-        location.href = "tesla.html";
-    };
-    visceral.onclick = function () {
-      location.href = "visceral.html"
-    };
-    maxis.onclick = function () {
-        location.href = "maxis.html";
-    };
-    collegebacker.onclick = function () {
-      location.href = "collegebacker-protected.html";
-    };
-    orai.onclick = function (){
-      location.href = "orai.html";
-    };
-    cabinet.onclick = function (){
-      location.href = "cabinet.html";
-    }
-    resume.onclick = function() {
-      location.href ="resume.pdf"
-    }
-</script>
+<script type="text/javascript" src="page_nav.js"></script>
 </body>
 </html>

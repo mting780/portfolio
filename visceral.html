@@ -1,7 +1,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Melody Ting</title>
   <meta name="description" content="Melody Ting">
   <meta name="author" content="SitePoint">
@@ -10,102 +9,44 @@
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-
-<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
-<div class="page-container">
-<h1 id="page_title2">melody ting</h1>     
+<body style="overflow-y: auto;scroll-behavior: smooth">
+  <div class="page-container">
+  <h1 id="page_title2">melody ting</h1>     
   <svg id="page_underline2" height="0" width="500">
       <line style="stroke:rgb(0,0,0);stroke-width:2" />
   </svg>
   <div class="side_nav" id="side_nav">
-    <div class="side_nav_item" id="home">virtual facility</div>
-    <div class="side_nav_item" id="visceral">EA visceral</div>
+    <div class="side_nav_item" id="home">about</div>
+    <div class="side_nav_item" style="font-weight:bolder" id="visceral">EA visceral</div>
     <div class="side_nav_item" id="maxis">EA maxis</div>
     <div class="side_nav_item" id="collegebacker">collegebacker</div>
     <div class="side_nav_item" id="tesla">tesla</div>
+    <div class="side_nav_item" id="orai">orai</div>
+    <div class="side_nav_item" id="cabinet">cabinet</div> 
     <br><br>
     <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
   </div>
-  <br><br>
-	<h2 class="subtitle">overview</h2>
-	<p class="content">The UX team at Visceral consisted of two full-time motion graphics/designers, four engineers, a QA engineer, and a product manager. Throughout my time there, I worked most closely with the two other designers to create motion mock ups, and UI. </p>
-	<h2 class="subtitle">fictional UI</h2>
-	<p class="content">These screens were mock-ups for a new spaceship that was hijacked by the game protagonists from Imperial forces. As such, I looked to elements from the Star Wars Empire for inspiration for the interface elements and design.</p>
-	<img class="visuals" src="Work_Documentation/Mongoose.png">
-	<h2 class="subtitle">user feedback indicators</h2>
-	<p class="content">One of the primary features I worked on was the design for enemy awareness meters. These were in-game UI elements that informed players how suspicious or "aware" the AI were of their presence during stealth play modes and are an integral part in any action-adventure game with AI.</p>
-	<video class="visuals" width="auto" height="auto" controls>
-	<source src="AMMockup_YellowContract.mp4" type="video/mp4">
-	Your browser does not support the video tag.
-	</video>
-	<p class="content">Motion mock-ups allowed me to present UI in the context of the game and visualize how a user would encounter it in its various states.</p>
-	<video class="visuals" width="auto" height="auto" controls>
-	<source src="Mongoose_Shield_Screen.mp4" type="video/mp4">
-	Your browser does not support the video tag.
-	</video>
-  <br><br>
-</div>
-<script>
-  function styleMenuSelection() {
-    var home = GetElementInsideContainer("side_nav","home");
-    var visceral = GetElementInsideContainer("side_nav","visceral");
-    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-    var tesla = GetElementInsideContainer("side_nav","tesla");
-    var maxis = GetElementInsideContainer("side_nav","maxis");
+    <br><br>
+  	<h2 class="subtitle">overview</h2>
+  	<p class="content">EA Visceral was a video game studio under the publisher Electronic Arts (EA). They specialized in third-person AAA games. In the summer of 2016 and from May-October of 2017, I interned as a UX/UI Design intern on their UX team. Throughout my time there, I worked on an undisclosed Star Wars game for console devices. In October 2017, EA shut down the studio and I was relocated to their Maxis studio.
 
-    var projectPath = window.location.pathname.replace('/', '')
-
-    switch(projectPath) {
-      case 'visceral.html':
-        visceral.style.fontWeight = 'bold'
-        break
-      case 'index.html': 
-        home.style.fontWeight = 'bold'
-        break
-      case 'collegebacker.html':
-        collegebacker.style.fontWeight = 'bold'
-        break
-      case 'tesla.html':
-        tesla.style.fontWeight = 'bold'
-        break
-      case 'maxis.html':
-        maxis.style.fontWeight = 'bold'
-        break
-      default:
-        break
-    }
-
-  }
-</script>
-<script type="text/javascript">
-    //from nnnnnn on stackoverflow
-	function GetElementInsideContainer(containerID, childID) {
-    var elm = document.getElementById(childID);
-    var parent = elm ? elm.parentNode : {};
-
-    return (parent.id && parent.id === containerID) ? elm : {};
-	};
-  
-	var home = GetElementInsideContainer("side_nav","home");
-	var tesla = GetElementInsideContainer("side_nav","tesla");
-	var maxis = GetElementInsideContainer("side_nav","maxis");
-	var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-
-    home.onclick = function () {
-      location.href = "index.html";
-    };
-    tesla.onclick = function () {
-        location.href = "tesla.html";
-    };
-    maxis.onclick = function () {
-        location.href = "maxis.html";
-    };
-    collegebacker.onclick = function () {
-    	location.href = "collegebacker-protected.html";
-    };
-    resume.onclick = function() {
-      location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
-    }
-</script>
+    The UX team at Visceral consisted of two full-time motion graphics artists/designers, four engineers, a QA engineer, and a product manager. Throughout my time there, I worked most closely with the two other designers to create motion mock ups, and UI. </p>
+  	<h2 class="subtitle">fictional UI</h2>
+  	<p class="content">These screens were mock-ups for a new spaceship that was hijacked by the game protagonists from Imperial forces. As such, I looked to elements from the Star Wars Empire for inspiration for the interface elements and design.</p>
+  	<img class="visuals" src="Work_Documentation/Mongoose.png">
+  	<h2 class="subtitle">user feedback indicators</h2>
+  	<p class="content">One of the primary features I worked on was the design for enemy awareness meters. These were in-game UI elements that informed players how suspicious or "aware" the AI were of their presence during stealth play modes and are an integral part in any action-adventure game with AI.</p>
+  	<video class="visuals" width="auto" height="auto" controls>
+  	<source src="AMMockup_YellowContract.mp4" type="video/mp4">
+  	Your browser does not support the video tag.
+  	</video>
+  	<p class="content">Motion mock-ups allowed me to present UI in the context of the game and visualize how a user would encounter it in its various states.</p>
+  	<video class="visuals" width="auto" height="auto" controls>
+  	<source src="Mongoose_Shield_Screen.mp4" type="video/mp4">
+  	Your browser does not support the video tag.
+  	</video>
+    <br><br>
+  </div>
+<script type="text/javascript" src="page_nav.js"></script>
 </body>
 </html>

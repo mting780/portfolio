@@ -9,18 +9,20 @@
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<body style="overflow-y: auto;scroll-behavior: smooth">
     	<div class="page-container">
     		<h1 id="page_title2">melody ting</h1>     
   <svg id="page_underline2" height="0" width="500">
       <line style="stroke:rgb(0,0,0);stroke-width:2" />
   </svg>
   <div class="side_nav" id="side_nav">
-        <div class="side_nav_item" id="home">virtual facility</div>
+        <div class="side_nav_item" id="home">about</div>
         <div class="side_nav_item" id="visceral">EA visceral</div>
-        <div class="side_nav_item" id="maxis">EA maxis</div>
+        <div class="side_nav_item" style="font-weight:bolder" id="maxis">EA maxis</div>
         <div class="side_nav_item" id="collegebacker">collegebacker</div>
         <div class="side_nav_item" id="tesla">tesla</div>
+        <div class="side_nav_item" id="orai">orai</div>
+        <div class="side_nav_item" id="cabinet">cabinet</div> 
         <br><br>
         <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
   </div>
@@ -48,72 +50,18 @@
         <h2 class="subtitle">daily reminders</h2>
         <p class="content">Stickering happens on two levels: as a daily interaction and a weekly voting contest. Players with the most votes are featured globally to all other players who then vote on their favorite finalist, who is then rewarded with in-game prizes. Players are incentivized to vote for other players in the daily round by receiving a small reward for completing the task as part of their Daily To Do List, which is a pre-existing set of rewarding tasks designed to encourage players to engage in all circles of the Sims world.</p>
         <img class="visuals" src="https://pro2-bar-s3-cdn-cf1.myportfolio.com/a9d5994869e24f0e572abe9b86b7383e/c2c0cbae-2b42-4ca3-a22f-bc409d648139_rw_1200.gif?h=6c478da188929f51ed7808e9073e8b39">
-        <h2 class="subtitle">stickering Interaction</h2>
+        <h2 class="subtitle">stickering interaction</h2>
         <p class="content">On the receiving end, players whose Sims have been given stickers are notified by whom they were given so as to encourage players to reciprocate the gesture.</p>
         <img class="visuals" src="https://pro2-bar-s3-cdn-cf.myportfolio.com/a9d5994869e24f0e572abe9b86b7383e/85f7301e-72a4-4ff9-9b26-cd5b117e4414_rw_1200.gif?h=d1f947f6cba275a4ca0297a4163a34cf">
         <h2 class="subtitle">retrospection</h2>
-        <p class="content">I left EA in December 2017 after my internship ended. Looking back, I am interested in seeing how the introduction of stickers contributes to the Sims Mobile social network and whether my concerns about player alienation came to be. I'm excited to see what future development on the feature brings to the game.
+        <p class="content">I left EA in December 2017 after my internship ended. Looking back, I am interested in seeing how the introduction of stickers contributes to the Sims Mobile social network and whether my concerns about player alienation came to be. I'm excited to see what future development on the feature brings to the game.</p>
         <br>
 </div>
 <script>
-  //from nnnnnn on stackoverflow
-  function GetElementInsideContainer(containerID, childID) {
-    var elm = document.getElementById(childID);
-    var parent = elm ? elm.parentNode : {};
-    return (parent.id && parent.id === containerID) ? elm : {};
-  };
-  var home = GetElementInsideContainer("side_nav","home");
-  var visceral = GetElementInsideContainer("side_nav","visceral");
-  var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var tesla = GetElementInsideContainer("side_nav","tesla");
-    home.onclick = function () {
-      location.href = "index.html";
-    }
-    visceral.onclick = function () {
-        location.href = "visceral.html";
-    };
-    collegebacker.onclick = function () {
-        location.href = "collegebacker-protected.html";
-    };
-    tesla.onclick = function () {
-      location.href = "tesla.html";
-    };
-    resume.onclick = function() {
-      location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
-    }
+
 </script>
-<script>
-  function styleMenuSelection() {
-    var home = GetElementInsideContainer("side_nav","home");
-    var visceral = GetElementInsideContainer("side_nav","visceral");
-    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-    var tesla = GetElementInsideContainer("side_nav","tesla");
-    var maxis = GetElementInsideContainer("side_nav","maxis");
+<script type="text/javascript" src="page_nav.js"></script>
 
-    var projectPath = window.location.pathname.replace('/', '')
-
-    switch(projectPath) {
-      case 'visceral.html':
-        visceral.style.fontWeight = 'bold'
-        break
-      case 'index.html': 
-        home.style.fontWeight = 'bold'
-        break
-      case 'collegebacker-protected.html':
-        collegebacker.style.fontWeight = 'bold'
-        break
-      case 'tesla.html':
-        tesla.style.fontWeight = 'bold'
-        break
-      case 'maxis.html':
-        maxis.style.fontWeight = 'bold'
-        break
-      default:
-        break
-    }
-
-  }
-</script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js'></script>
 <script  src="./timeline.js"></script>

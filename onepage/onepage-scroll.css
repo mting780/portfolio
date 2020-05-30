@@ -399,7 +399,7 @@ h5.timeline-slide__content{
   position: absolute;
   width: 104px;
   left: 5%;
-  top: 13%;
+  top: 15%;
   border: 2px solid #000000;
   stroke: 2px solid #4c4c4c;
   z-index: 2;
@@ -497,6 +497,43 @@ i {
 
 }
 
+
+.col{
+  float:left;
+  padding: 10px;
+  width:25%;
+  text-align:center;
+  margin: 0 auto;
+  position:relative;
+}
+
+.row{
+  margin-left:30%;
+  width:inherit;
+  padding: 15px 0px 15px 0px
+}
+
+.inline_visual{
+  width:80%;
+  margin: 20 auto;
+  width:180px;
+  height:180px;
+  z-index: 100;
+}
+
+.overlay_visual{
+  width:80%;
+  width:180px;
+  margin:20 auto;
+  left:60;
+  height:180px;
+  z-index: 0;
+  position:absolute;
+  opacity:0;
+}
+.overlay_visual:hover{
+  opacity:100%;
+}
 
 .visuals {
   max-width: 50%;

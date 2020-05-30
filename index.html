@@ -1,7 +1,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Melody Ting</title>
   <meta name="description" content="Melody Ting">
   <meta name="author" content="SitePoint">
@@ -9,96 +8,94 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script>
+    function indexNav(x){
+      let item = x['id']
+      console.log(item)
+      switch (item) {
+        case 'visceral_illo': location.href="visceral.html"
+        break;
+        case 'sims_illo': location.href="maxis.html"
+        break;
+        case 'collegebacker_illo': location.href="collegebacker-protected.html"
+        break;
+        case 'tesla_illo': location.href="tesla.html"
+        break;
+        case 'orai_illo': location.href="orai.html"
+        break;
+        case 'cabinet_illo': location.href="cabinet.html"
+        break;
+        default: location.href="index.html"
+      }
+
+
+    }
+
+  </script>
 </head>
-<br><br>
-<body onload="styleMenuSelection()" style="overflow-y: auto;scroll-behavior: smooth">
+<body style="overflow-y: auto;scroll-behavior: smooth">
 <div class="page-container">
 	<h1 id="page_title2">melody ting</h1>   	
 	<svg id="page_underline2" height="0" width="500">
-			<line style="stroke:rgb(0,0,0);stroke-width:2" />
+			<line style="stroke:rgb(0,0,0);stroke-width:2"/>
 	</svg>
 	<div class="side_nav" id="side_nav">
-    <div class="side_nav_item" id="home">virtual facility</div>
+    <div class="side_nav_item" id="home" style="font-weight:bolder">about</div>
     <div class="side_nav_item" id="visceral">EA visceral</div>
     <div class="side_nav_item" id="maxis">EA maxis</div>
     <div class="side_nav_item" id="collegebacker">collegebacker</div>
     <div class="side_nav_item" id="tesla">tesla</div>
+    <div class="side_nav_item" id="orai">orai</div>   
+    <div class="side_nav_item" id="cabinet">cabinet</div> 
     <br><br>
     <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
   </div>
   <br><br>
-	<h2 class="subtitle">overview</h2>
-	<p class="content">Virtual Facility is a SAAS company that empowers facilities to target alarms, optimize repairs and maintenance, and create better work. The core product consists of an alarm triaging software that enables users to quickly identify alarms, target root causes, and identify opportunities to create streamline facility operations.</p>
-  <h2 class="subtitle">what i do </h2>
-  <p class="content">As one of two designers on the team, my responsibilities span the entire spectrum of design - from brainstorming and prototyping core features to conducting user interviews and distilling feedback. My coworker and fellow designer <a href="https://rolanddubois.com/">Roland Dubois</a> and I have been tasked with establishing the design system and foundation for the web platform and are in the process of documenting our entire process. For more information on specific projects I have been working on, please reach out to me directly via email or <a href="https://www.linkedin.com/in/melody-ting/">Linkedin</a>. </p>
+	<h2 class="subtitle">who am i</h2>
+	<p class="content">Hello, I'm Melody. I'm a digital product designer specializing in intuitive solutions for data-intensive products. I'm passionate about creating impactful experiences with a user-centric approach and enjoy walking the fine line between art and design. I've had the opportunity to work on some cool projects, from creating UI for a <a href="/visceral.html"> Star Wars vehicle</a> to designing <a href="/tesla.html">semi-automated solutions </a> for Tesla's supply chain operations. </p>
+  <p class="content"></p>
+  <h2 class="subtitle">where i am now</h2>
+  <p class="content">You can find me designing in midtown NYC at <a href="https://www.virtualfacility.ai/">Virtual Facility</a>, creating facility automation software.</p>
 
+  <h2 class="subtitle">explore projects</h2>
+  <!-- first row -->
+  <div class="row">
+    <div class="col" onclick="indexNav(this)" id="visceral_illo">
+      <img class="inline_visual" src="visceral_illo.png">
+      <img class="overlay_visual" src="visceral_overlay.png">
+      <h3 class="caption">Visceral | UX/UI</h3>
+    </div>
+    <div class="col" onclick="indexNav(this)" id="sims_illo" >
+      <img class="inline_visual" src="sims_illo.png">
+      <img class="overlay_visual" src="sims_overlay.png">
+      <h3 class="caption">Maxis | UX </h3>
+    </div>
+    <div class="col" onclick="indexNav(this)" id="collegebacker_illo">
+      <img class="inline_visual" src="Work_Documentation/collegebacker_illo.png">
+      <img class="overlay_visual" src="collegebacker_hover.png">
+      <h3 class="caption">Collegebacker | UX </h3>
+    </div>
+  </div>
+<!--second row-->    
+  <div class="row">
+    <div class="col" onclick="indexNav(this)" id="cabinet_illo">
+      <img class="inline_visual" src="cabinet_illo.png">
+      <img class="overlay_visual" src="cabinet_overlay.png">
+      <h3 class="caption">Cabinet | Design Consultant</h3>
+    </div>
+  <div class="col" onclick="indexNav(this)" id="orai_illo">
+      <img class="inline_visual" src="orai_illo.png">
+      <img class="overlay_visual" src="orai_overlay.png">
+      <h3 class="caption">Orai | Product Design</h3>
+  </div>
+  </div>
 </div>
 <script>
-  function styleMenuSelection() {
-    var home = GetElementInsideContainer("side_nav","home");
-    var visceral = GetElementInsideContainer("side_nav","visceral");
-    var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-    var tesla = GetElementInsideContainer("side_nav","tesla");
-    var maxis = GetElementInsideContainer("side_nav","maxis");
-
-    var projectPath = window.location.pathname.replace('/', '')
-
-    switch(projectPath) {
-      case 'visceral.html':
-        visceral.style.fontWeight = 'bold'
-        break
-      case 'index.html': 
-        home.style.fontWeight = 'bold'
-        break
-      case 'collegebacker-protected.html':
-        collegebacker.style.fontWeight = 'bold'
-        break
-      case 'tesla.html':
-        tesla.style.fontWeight = 'bold'
-        break
-      case 'maxis.html':
-        maxis.style.fontWeight = 'bold'
-        break
-      default:
-        break
-    }
-
+  function getGif(illo){
+    console.log('hello')
+    illo.style.opacity=0
   }
 </script>
-<script type="text/javascript">
-    //from nnnnnn on stackoverflow
-	function GetElementInsideContainer(containerID, childID) {
-    var elm = document.getElementById(childID);
-    var parent = elm ? elm.parentNode : {};
-    return (parent.id && parent.id === containerID) ? elm : {};
-
-	};
-  
-	var home = GetElementInsideContainer("side_nav","home");
-	var tesla = GetElementInsideContainer("side_nav","tesla");
-	var maxis = GetElementInsideContainer("side_nav","maxis");
-  var visceral = GetElementInsideContainer("side_nav","visceral");
-	var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var resume = GetElementInsideContainer("side_nav","resume");
-
-    home.onclick = function () {
-      location.href = "index.html";
-    };
-    tesla.onclick = function () {
-        location.href = "tesla.html";
-    };
-    maxis.onclick = function () {
-        location.href = "maxis.html";
-    };
-    visceral.onclick=function (){
-      location.href = "visceral.html"
-    }
-    collegebacker.onclick = function () {
-    	location.href = "collegebacker.html";
-    };
-    resume.onclick = function() {
-      location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
-    }
-</script>
+<script type="text/javascript" src="page_nav.js"></script>
 </body>
 </html>

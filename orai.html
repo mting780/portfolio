@@ -1,7 +1,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Melody Ting</title>
   <meta name="description" content="Melody Ting">
   <meta name="author" content="SitePoint">
@@ -10,64 +9,48 @@
   <link rel="stylesheet" href="onepage/onepage-scroll.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-<br><br>
 <body style="overflow-y: auto;scroll-behavior: smooth">
-<div class="page-container">
-	<h1 id="page_title2">melody ting</h1>   	
-	<svg id="page_underline2" height="0" width="500">
-			<line style="stroke:rgb(0,0,0);stroke-width:2" />
-	</svg>
-	<div class="side_nav" id="side_nav">
-    <div class="side_nav_item" id="home">virtual facility</div>
+  <div class="page-container">
+  <h1 id="page_title2">melody ting</h1>     
+  <svg id="page_underline2" height="0" width="500">
+      <line style="stroke:rgb(0,0,0);stroke-width:2" />
+  </svg>
+  <div class="side_nav" id="side_nav">
+    <div class="side_nav_item" id="home">about</div>
     <div class="side_nav_item" id="visceral">EA visceral</div>
     <div class="side_nav_item" id="maxis">EA maxis</div>
     <div class="side_nav_item" id="collegebacker">collegebacker</div>
     <div class="side_nav_item" id="tesla">tesla</div>
+    <div class="side_nav_item" style="font-weight:bolder" id="orai">orai</div>
+    <div class="side_nav_item" id="cabinet">cabinet</div> 
     <br><br>
     <div class="side_nav_item" id="resume" style="text-decoration: underline;">resume</div>
   </div>
-  <br><br>
-	<h2 class="subtitle">overview</h2>
-	<p class="content">Virtual Facility is a SAAS that empowers facilities to target alarms, optimize operations, and create better work. The core product consists of an alarm triaging software that enables users to quickly identify alarms, target root causes and identify opportunities to create better work.</p>
-  <h2 class="subtitle">what i do </h2>
-  <p class="content">As one of two designers on the team, my responsibilities span the entire spectrum of design - from brainstorming and prototyping core features to conducting user interviews and distilling feedback. My coworker and fellow designer <a href="https://rolanddubois.com/">Roland Dubois</a> have been tasked with establishing the design system and foundation for the web platform and are in the process of documenting our entire process. For more information on specific projects I have been working on, please reach out to me directly via email or <a href="linkedin.com/in/melody-ting">Linkedin</a>. </p>
-
-</div>
-<script type="text/javascript">
-    //from nnnnnn on stackoverflow
-	function GetElementInsideContainer(containerID, childID) {
-    var elm = document.getElementById(childID);
-
-    var parent = elm ? elm.parentNode : {};
-    return (parent.id && parent.id === containerID) ? elm : {};
-
-	};
+    <br><br>
+    <h2 class="subtitle">overview</h2>
+    <p class="content"><a href="https://oraiapp.com">Orai</a> is a mobile communication coach that empowers users to become stronger, more confident communicators through interactive lessons, tips, and assessments. We were a small team of fewer than 20 people based primarily in Philadelphia, USA, but with various teammates scattered around the globe. I was laid off in June 2019 due to the team's financial shortcomings. </p>
+    <h2 class="subtitle">what I did</h2>
+    <p class="content">As a member of the design team, I worked alongside the design lead and an instructional designer to create original content, streamline the design system, and design consumer-facing content that reached millions of users worldwide.</p>
+    <h2 class="subtitle">the problem</h2>
+    <p class="content">One of the most challenging issues I tackled during my time at Orai was improving user retention. Orai was experiencing an overwhelming number of user dropout after a week of 'bingeing' on lesson content. Users were also consuming content at a higher rate than the team was able to produce.</p>
+    <h2 class="subtitle">the process</h2>
+    <p class="content">
+    <a href="https://trainingindustry.com/articles/content-development/knowledge-retention-tactics-for-more-effective-learning"> Research</a> demonstrates that repeated, consistent exposure to concepts is the most effective method for strengthening learning retention. I examined popular and effective learning apps to identify how they employed different methods to encourage users to return.</p><br>
+    <p class="content">Our understanding of learning science served as the foundation for the redesign and informed our approach, which exposed users to consistent material in short doses throughout the day and encouraged regular practice.</p>
+    <img class="visuals" src="Work_Documentation/Orai_Weekly.png">
+    <p class="content">I conducted user interviews with existing users - both within our enterprise client teams and individual users - to learn more about our users' learning objectives. I learned that users were eager to learn new content, but exhausted material too quickly. They would 'binge' the app but found little reason to return after they finished their lessons. While we loved that users were so excited by the content that they would exhaust the lessons so quickly, we also recognized the importance of practicing material and refining skills. As such, we decided to introduce cadence setting.</p>
+    <img class="visuals" src="Work_Documentation/Orai_Daily.png">
+    <p class="content">While the original experience allowed users to pick and choose from an open collection of lessons, the new approach was regimented - users would complete a quiz as part of their onboarding to better determine their personal learning objectives. From there, their results would determine which lesson pack was most appropriate for their learning goals. The lesson packs were designed to span 5-days and included a combination of new material and reinforcing learned content.</p>
+<!--     <img class="visuals" src="Work_Documentation/Cadence_lesson.jpg">
+ -->    <p class="content">I created an animated mock-up to demonstrate interaction and flow.</p>
+     <video class="visuals" width="50%" height="50%" controls>
+        <source src="Work_Documentation/Cadence_v1.mp4">
+    </video>
+    <h2 class="subtitle">looking ahead</h2>
+    <p class="content">My time at Orai was cut short shortly after the experience redesign was moved to development. I wish the best to the Orai team as they move ahead and look forward to where they go in the future.</p>
   
-	var home = GetElementInsideContainer("side_nav","home");
-	var tesla = GetElementInsideContainer("side_nav","tesla");
-	var maxis = GetElementInsideContainer("side_nav","maxis");
-  var visceral = GetElementInsideContainer("side_nav","visceral");
-	var collegebacker = GetElementInsideContainer("side_nav","collegebacker");
-  var resume = GetElementInsideContainer("side_nav","resume");
-
-    home.onclick = function () {
-      location.href = "index.html";
-    };
-    tesla.onclick = function () {
-        location.href = "tesla.html";
-    };
-    maxis.onclick = function () {
-        location.href = "maxis.html";
-    };
-    visceral.onclick=function (){
-      location.href = "visceral.html"
-    }
-    collegebacker.onclick = function () {
-    	location.href = "collegebacker.html";
-    };
-    resume.onclick = function() {
-      location ="https://www.dropbox.com/s/sdbqeb9p5i5b4wf/Resume_MelodyTing.pdf?dl=0"
-    }
-</script>
+    <br><br>
+  </div>
+<script type="text/javascript" src="page_nav.js"></script>
 </body>
 </html>

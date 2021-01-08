@@ -470,8 +470,6 @@ i {
   padding: 5px;
 }
 
-
-
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -745,14 +743,7 @@ a.highlight3:hover:before {
   cursor: pointer;
 }
 
-.icon{
-  color:#080808;
-  margin: 0px auto;
-  text-decoration: none;
-}
-.icon:hover{
-  color:#c4c4c4;
-}
+
 
 .resume:hover{
   color: #c4c4c4;

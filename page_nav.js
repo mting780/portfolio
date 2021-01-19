@@ -41,7 +41,12 @@
       cabinet.onclick = function (){
         cabinet.style.fontWeight = 'bolder'
         location.href = "cabinet.html";
-      }
+      };
+      evios.onclick = function (){
+      cabinet.style.fontWeight = 'bolder'
+      location.href = "evios.html";
+      };
+
       resume.onclick = function() {
         location.href ="resume.pdf"
       }
